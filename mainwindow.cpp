@@ -11,9 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     ui->D->setValidator(new QIntValidator(2, 99999999));
-    ui->P->setValidator(new QIntValidator(2, 99999999));
-    ui->secretKeyAlice->setValidator(new QIntValidator(2, 99999999));
-    ui->secretKeyBob->setValidator(new QIntValidator(2, 99999999));
+    ui->p->setValidator(new QIntValidator(2, 99999999));
+    ui->openKeyN->setValidator(new QIntValidator(2, 99999999));
+    ui->openKeyE->setValidator(new QIntValidator(2, 99999999));
 
     connect(ui->btnGenerate, SIGNAL(clicked(bool)), this, SLOT(generate()));
     connect(ui->btnClean, SIGNAL(clicked(bool)), this, SLOT(cleanResult()));
@@ -26,14 +26,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::generate() {
     int D = ui->D->text().toInt();
-    int P = ui->P->text().toInt();
+    int P = ui->p->text().toInt();
 
     // Проверка на простые числа
     if (not(isPrime(D) and isPrime(P)))
         return;
 
-    int secretKeyAlice = ui->secretKeyAlice->text().toInt();
-    int secretKeyBob = ui->secretKeyBob->text().toInt();
+    int secretKeyAlice = ui->openKeyN->text().toInt();
+    int secretKeyBob = ui->openKeyE->text().toInt();
 
     // Проверка закрытых ключей
     if (not(secretKeyAlice > 1 and secretKeyBob > 1))
@@ -56,9 +56,9 @@ void MainWindow::generate() {
 
 void MainWindow::cleanResult() {
     ui->D->clear();
-    ui->P->clear();
-    ui->secretKeyAlice->clear();
-    ui->secretKeyBob->clear();
+    ui->p->clear();
+    ui->openKeyN->clear();
+    ui->openKeyE->clear();
     ui->openKeyAlice->clear();
     ui->openKeyBob->clear();
     ui->globalKeyAlice->clear();
