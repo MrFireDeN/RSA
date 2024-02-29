@@ -3,7 +3,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <QIntValidator>
+#include <math.h>
 
 
 QT_BEGIN_NAMESPACE
@@ -18,6 +19,14 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void generate();
+    void cleanResult();
+
+    int generateKey(int, int, int);
+
+    bool isPrime(int);
 
 private:
     Ui::MainWindow *ui;

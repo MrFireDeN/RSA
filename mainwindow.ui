@@ -60,7 +60,7 @@
           <item row="0" column="1">
            <widget class="QLabel" name="openKeyBob">
             <property name="text">
-             <string>null</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -80,7 +80,7 @@
           <item row="1" column="1">
            <widget class="QLabel" name="globalKeyBob">
             <property name="text">
-             <string>null</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -141,7 +141,7 @@
           <item row="0" column="1">
            <widget class="QLabel" name="openKeyAlice">
             <property name="text">
-             <string>null</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -161,7 +161,7 @@
           <item row="1" column="1">
            <widget class="QLabel" name="globalKeyAlice">
             <property name="text">
-             <string>null</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -192,7 +192,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_D"/>
+           <widget class="QLineEdit" name="D"/>
           </item>
           <item>
            <widget class="QLabel" name="label_2">
@@ -202,7 +202,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_P"/>
+           <widget class="QLineEdit" name="P"/>
           </item>
           <item>
            <spacer name="horizontalSpacer_2">
@@ -275,7 +275,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="btbGenerate">
+        <widget class="QPushButton" name="btnGenerate">
          <property name="text">
           <string>Генерировать</string>
          </property>
