@@ -10,8 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    ui->D->setValidator(new QIntValidator(2, 99999999));
-    ui->p->setValidator(new QIntValidator(2, 99999999));
+    //ui->q->setValidator(new QIntValidator(2, 99999999));
+    //ui->p->setValidator(new QIntValidator(2, 99999999));
     ui->openKeyN->setValidator(new QIntValidator(2, 99999999));
     ui->openKeyE->setValidator(new QIntValidator(2, 99999999));
 
@@ -25,44 +25,44 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::generate() {
-    int D = ui->D->text().toInt();
-    int P = ui->p->text().toInt();
+//    //int D = ui->D->text().toInt();
+//    int P = ui->p->text().toInt();
 
-    // Проверка на простые числа
-    if (not(isPrime(D) and isPrime(P)))
-        return;
+//    // Проверка на простые числа
+//    if (not(isPrime(D) and isPrime(P)))
+//        return;
 
-    int secretKeyAlice = ui->openKeyN->text().toInt();
-    int secretKeyBob = ui->openKeyE->text().toInt();
+//    int secretKeyAlice = ui->openKeyN->text().toInt();
+//    int secretKeyBob = ui->openKeyE->text().toInt();
 
-    // Проверка закрытых ключей
-    if (not(secretKeyAlice > 1 and secretKeyBob > 1))
-        return;
+//    // Проверка закрытых ключей
+//    if (not(secretKeyAlice > 1 and secretKeyBob > 1))
+//        return;
 
-    // Генерация открытых ключей
-    int openKeyAlice = generateKey(D, P, secretKeyAlice);
-    int openKeyBob = generateKey(D, P, secretKeyBob);
+//    // Генерация открытых ключей
+//    int openKeyAlice = generateKey(D, P, secretKeyAlice);
+//    int openKeyBob = generateKey(D, P, secretKeyBob);
 
-    // Генерация общих ключей
-    int globalKeyAlice = generateKey(openKeyBob, P, secretKeyAlice);
-    int globalKeyBob = generateKey(openKeyAlice, P, secretKeyBob);
+//    // Генерация общих ключей
+//    int globalKeyAlice = generateKey(openKeyBob, P, secretKeyAlice);
+//    int globalKeyBob = generateKey(openKeyAlice, P, secretKeyBob);
 
-    // Отображение
-    ui->openKeyAlice->setText(QString::number(openKeyAlice));
-    ui->openKeyBob->setText(QString::number(openKeyBob));
-    ui->globalKeyAlice->setText(QString::number(globalKeyAlice));
-    ui->globalKeyBob->setText(QString::number(globalKeyBob));
+//    // Отображение
+//    ui->openKeyAlice->setText(QString::number(openKeyAlice));
+//    ui->openKeyBob->setText(QString::number(openKeyBob));
+//    ui->globalKeyAlice->setText(QString::number(globalKeyAlice));
+//    ui->globalKeyBob->setText(QString::number(globalKeyBob));
 }
 
 void MainWindow::cleanResult() {
-    ui->D->clear();
-    ui->p->clear();
-    ui->openKeyN->clear();
-    ui->openKeyE->clear();
-    ui->openKeyAlice->clear();
-    ui->openKeyBob->clear();
-    ui->globalKeyAlice->clear();
-    ui->globalKeyBob->clear();
+//    ui->D->clear();
+//    ui->p->clear();
+//    ui->openKeyN->clear();
+//    ui->openKeyE->clear();
+//    ui->openKeyAlice->clear();
+//    ui->openKeyBob->clear();
+//    ui->globalKeyAlice->clear();
+//    ui->globalKeyBob->clear();
 }
 
 int MainWindow::generateKey(int D, int P, int key) {
