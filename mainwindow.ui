@@ -27,47 +27,7 @@
        <item>
         <widget class="QWidget" name="keyGenerator" native="true">
          <layout class="QGridLayout" name="gridLayout_4">
-          <item row="3" column="4">
-           <spacer name="horizontalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="1" column="2">
-           <widget class="QLineEdit" name="p">
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>16777215</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>q</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="2">
-           <widget class="QLineEdit" name="q">
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>16777215</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0" rowspan="2" colspan="2">
+          <item row="2" column="0" rowspan="2" colspan="2">
            <widget class="QLabel" name="label_1">
             <property name="text">
              <string>p</string>
@@ -81,21 +41,81 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="0" colspan="5">
+          <item row="4" column="2">
+           <widget class="QLineEdit" name="q">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>211</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="4">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLineEdit" name="p">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>277</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" colspan="5">
            <widget class="QPushButton" name="btnGenerate">
             <property name="text">
              <string>Генерировать</string>
             </property>
            </widget>
           </item>
-          <item row="6" column="0" colspan="5">
+          <item row="7" column="0" colspan="5">
            <widget class="QPushButton" name="btnClean">
             <property name="text">
              <string>Очистить</string>
             </property>
            </widget>
           </item>
+          <item row="1" column="0" colspan="5">
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>q</string>
+            </property>
+           </widget>
+          </item>
          </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
         </widget>
        </item>
        <item>
@@ -171,8 +191,28 @@
         </widget>
        </item>
        <item>
+        <widget class="Line" name="line_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QWidget" name="secretKeys" native="true">
          <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0" colspan="3">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Закрытый ключ</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::AutoText</enum>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
           <item row="1" column="1">
            <widget class="QLineEdit" name="secretKeyD">
             <property name="maximumSize">
@@ -209,20 +249,14 @@
             </property>
            </spacer>
           </item>
-          <item row="0" column="0" colspan="3">
-           <widget class="QLabel" name="label_5">
-            <property name="text">
-             <string>Закрытый ключ</string>
-            </property>
-            <property name="textFormat">
-             <enum>Qt::AutoText</enum>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
          </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
         </widget>
        </item>
        <item>
@@ -264,161 +298,7 @@
       </layout>
      </widget>
     </item>
-    <item row="0" column="1">
-     <widget class="QWidget" name="widget_11" native="true">
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="2" column="0">
-        <widget class="QWidget" name="widget_6" native="true">
-         <layout class="QGridLayout" name="gridLayout_3">
-          <item row="2" column="0" colspan="5">
-           <widget class="QLabel" name="label_15">
-            <property name="text">
-             <string>Текст для зашифрования</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="4">
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="openKeyN_2">
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>16777215</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_7">
-            <property name="text">
-             <string>n</string>
-            </property>
-            <property name="textFormat">
-             <enum>Qt::AutoText</enum>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="QLineEdit" name="openKeyE_2">
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>16777215</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0" colspan="5">
-           <widget class="QLineEdit" name="textToEncrypt"/>
-          </item>
-          <item row="6" column="0" colspan="5">
-           <widget class="QLineEdit" name="encryptedTextCode"/>
-          </item>
-          <item row="8" column="0" colspan="5">
-           <widget class="QTextEdit" name="encryptedText"/>
-          </item>
-          <item row="0" column="0" colspan="5">
-           <widget class="QLabel" name="label_12">
-            <property name="text">
-             <string>Открытый ключ</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="0" colspan="5">
-           <widget class="QLabel" name="label_16">
-            <property name="text">
-             <string>Код текста</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QLabel" name="label_13">
-            <property name="text">
-             <string>e</string>
-            </property>
-            <property name="textFormat">
-             <enum>Qt::AutoText</enum>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="0" colspan="5">
-           <widget class="QLabel" name="label_17">
-            <property name="text">
-             <string>Зашиврованный текст</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0" colspan="4">
-           <widget class="QWidget" name="widget_12" native="true">
-            <layout class="QHBoxLayout" name="horizontalLayout_2">
-             <item>
-              <widget class="QPushButton" name="btnEncrypt">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>Зашифровать</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="btnCleanEncrypted">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>Очистить</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="0" column="0" colspan="2">
-        <widget class="QLabel" name="label_11">
-         <property name="text">
-          <string>Шифрование текста</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="1" column="1">
+    <item row="1" column="2">
      <widget class="QWidget" name="widget_13" native="true">
       <layout class="QGridLayout" name="gridLayout_8">
        <item row="2" column="0">
@@ -570,6 +450,171 @@
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QWidget" name="widget_11" native="true">
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="2" column="0">
+        <widget class="QWidget" name="widget_6" native="true">
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="2" column="0" colspan="5">
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>Текст для зашифрования</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="openKeyN_2">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>n</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::AutoText</enum>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="openKeyE_2">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="5">
+           <widget class="QLineEdit" name="textToEncrypt">
+            <property name="text">
+             <string>Текст в РАЗНЫХ рЕгИсТрАх! 2 + 2 = 4</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" colspan="5">
+           <widget class="QLineEdit" name="encryptedTextCode"/>
+          </item>
+          <item row="8" column="0" colspan="5">
+           <widget class="QTextEdit" name="encryptedText"/>
+          </item>
+          <item row="0" column="0" colspan="5">
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>Открытый ключ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" colspan="5">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>Код текста</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>e</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::AutoText</enum>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" colspan="5">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>Зашиврованный текст</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="4">
+           <widget class="QWidget" name="widget_12" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QPushButton" name="btnEncrypt">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Зашифровать</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnCleanEncrypted">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Очистить</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Шифрование текста</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="2">
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
      </widget>
     </item>
    </layout>

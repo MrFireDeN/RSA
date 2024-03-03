@@ -5,6 +5,8 @@
 #include <QMainWindow>
 #include <QIntValidator>
 #include <math.h>
+#include <QMessageBox>
+//#include <boost/multiorecision/cpp_int.hpp>
 
 
 QT_BEGIN_NAMESPACE
@@ -21,15 +23,31 @@ public:
     ~MainWindow();
 
 private slots:
-    void generate();
-    void cleanResult();
+    void generate();                                                // Генерация ключей
+    void cleanResult();                                             // Очисить генерацию
 
-    int generateKey(int, int, int);
+    void encrypt();                                                 // Зашифрофать
+    void unencrypt();                                               // Расшифровать
 
-    bool isPrime(int);
+    void cleanEncrypted();                                          // Очистить зашифрованное
+    void cleanUnencrypted();                                        // Очистить расшифрованное
+
+    int generateKey(unsigned long long, unsigned long long, unsigned long long);   // Генерировать ключ
+
+    bool isPrime(int);                                              // Проверка на простое число
+
+    int extendedEuclidean(int a, int b, int&, int&);                // Расширенный алгоритм Евклида
+    int modInverse(int a, int n);                                   // Функция для нахождения обратного числа по модулю n
 
 private:
     Ui::MainWindow *ui;
+
+    const QString ALPHABET = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+                             "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+                             "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                             "abcdefghijklmnopqrstuvwxyz"
+                             "0123456789"
+                             "!\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ ";
 };
 
 #endif // MAINWINDOW_H
